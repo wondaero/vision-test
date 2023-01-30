@@ -74,6 +74,7 @@
                 {0: 'O', 1: '0'},
                 {0: 'P', 1: 'R'},
                 {0: 'l', 1: 'I'},
+                {0: 'U', 1: 'O'},
             ];
 
 
@@ -105,7 +106,7 @@
                 t.guess = function(target){
                     if(!t.startTime) return;
                     if(t.q === target.innerText){
-                        if(t.qLevel == 3){
+                        if(t.qLevel == 4){
                             t.result(true);
                             return;
                         }
