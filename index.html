@@ -83,7 +83,7 @@
             <h1>시력테스트</h1>
             <div>
                 <button onclick="visionTest.startGame();">시작</button>
-                <button>랭킹</button>
+                <!-- <button>랭킹</button> -->
             </div>
         </header>
         <div class="wrapper">
@@ -140,7 +140,7 @@
 
                 t.guess = function(target){
                     if(!t.startTime) return;
-                    if(t.q === target.innerText){
+                    if(t.q == target.innerHTML){
                         if(t.qLevel == 3){
                             t.result(true);
                             return;
@@ -175,8 +175,6 @@
                     
                     t.q = finalSymbol;
                     
-                    console.log(t.q);
-                    
                     question.querySelector('span').innerHTML = t.q;
                     
                     
@@ -209,7 +207,6 @@
                     lv.innerHTML += '<span class="rec">' + ((t.endTime - t.startTime) / 1000) + '초</span>';
                     guide.innerHTML = '게임이 끝났습니다.';
                     exList.classList.add('hidden');
-
                 }
             }
 
